@@ -1,0 +1,16 @@
+{
+  "name": "blog-application",
+  "version": "1.0.0",
+  "description": "A social media application.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0",
+    "nodemon": "^3.1.0"
+  }
+}
