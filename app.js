@@ -22,6 +22,26 @@ app.use('/api', (req, res, next) => {
     res.send("Media Application")
     next()
 })
+
+// app.use((err, req, res, next) => {
+//     res.status(err.statusCode).json({
+//         status: err.statusCode,
+//         error: err,
+//         message: err.message,
+//         stack: err.stack
+//     })
+//     next()
+// })
+
 app.listen(port, () => {
     console.log(`Running on Port ${port}`)
+})
+
+app.use((err, req, res, next) => {
+    res.status(err.statusCode).json({
+        status: err.statusCode,
+        error: err,
+        message: err.message,
+        stack: err.stack
+    })
 })
